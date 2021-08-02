@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
 end
 
 ```
-- the provision.sh contains the necessary install commands:
+- the provision.sh contains the necessary installation commands from https://www.jenkins.io/doc/book/installing/linux/:
 ```linux
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -21,8 +21,7 @@ sudo apt-get update -y
 sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ >> /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get install jenkins -y
 ```
-- after sshing in (`vagrant ssh`) follow installation commands from https://www.jenkins.io/doc/book/installing/linux/ to install jenkins into vagrant machine
-- go to the ip set in the vagrant file and add :8080 to access the jenkins server
+- in your browser, go to the ip set in the vagrant file and add :8080 to access the jenkins server (this can be reverse proxied out)
 - go to `/var/lib/jenkins/secrets/initialAdminPassword` to access
 - if access is denied use `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 
