@@ -1,5 +1,5 @@
-# creating a Jemkins instance in vagrant
-- set up VM with vagrantfile specifying ubuntu/xenial64, same as in https://github.com/twilliams9397/eng89_vagrant_VM
+# creating a Jenkins instance in vagrant
+- set up VM with vagrantfile below:
 ```ruby
 Vagrant.configure("2") do |config|
 
@@ -25,3 +25,5 @@ sudo apt-get install jenkins -y
 - go to the ip set in the vagrant file and add :8080 to access the jenkins server
 - go to `/var/lib/jenkins/secrets/initialAdminPassword` to access
 - if access is denied use `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
+
+# using amazon ec2 instance
