@@ -22,9 +22,11 @@ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ >> /etc/apt/so
 sudo apt-get update -y
 sudo apt-get install jenkins -y
 ```
-- in your browser, go to the ip set in the vagrant file and add :8080 to access the jenkins server (this can be reverse proxied out)
+- in your browser, go to the ip set in the vagrant file and add :8080 to access the jenkins server
 - go to `/var/lib/jenkins/secrets/initialAdminPassword` to access
 - if access is denied use `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 - after logging in, choose the plugins required and install what is necessary
 
 # using amazon ec2 instance
+- use usual ec2 setup steps but use ubuntu 18.04 box
+- go through install steps from provision file and then follow jenkins login steps
